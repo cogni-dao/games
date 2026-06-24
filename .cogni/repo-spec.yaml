@@ -9,19 +9,29 @@
 
 schema_version: "0.1.4"
 
-node_id: "b927a9dd-6132-4fc9-a51e-e3cee2568e3c"
-scope_id: "b44d4394-3147-5787-acab-51546be6a3da"
+node_id: "baa9148e-3245-4f7d-976b-292fd049ca38"
+scope_id: "aa6a6bad-eaa7-5835-b7f7-6478caf0192d"
 scope_key: "default"
 
 intent:
-  name: node-template
-  # `mission` is your node's one-line identity — surfaced at the top of every
-  # agent's session cognition (the node's reason to exist). Forkers: replace the
-  # default below with your node's actual mission (what it does + why it matters).
-  mission: "A Cogni node — a web3-governed, AI-powered organization with its own mission, built on the shared operator substrate."
+  name: games
+  mission: "Define games's one-line mission here — refine in .cogni/repo-spec.yaml (surfaced at session start)."
 
 cogni_dao:
-  chain_id: "8453" # Base mainnet
+  dao_contract: "0x6ff3c9c5a942347eceed05b82a90d6d10d514d82"
+  plugin_contract: "0x838f07e4118f8ceee29d602c03156645ffccbd76"
+  signal_contract: "0x885ab2df5a4dd263fcee45b7d8d6aebef72c2498"
+  chain_id: "8453"
+  base_url: "https://proposal.cognidao.org"
+
+knowledge:
+  database: "knowledge_games"
+  remote:
+    provider: dolthub
+    owner: "cogni-dao"
+    repo: "knowledge-games"
+    url: "https://doltremoteapi.dolthub.com/cogni-dao/knowledge-games"
+    custody: cogni-owned
 
 # Activity ledger ingestion + approver allowlist.
 # `approvers` gates the `(admin)/` route group and write routes under
@@ -34,7 +44,7 @@ activity_ledger:
   activity_sources:
     github:
       attribution_pipeline: cogni-v0.0
-      source_refs: ["Cogni-DAO/standalone-node"]
+      source_refs: ["cogni-dao/games"]
 
 payments:
   status: pending_activation
