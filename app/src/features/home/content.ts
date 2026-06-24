@@ -19,16 +19,11 @@
  * @public
  *
  * ─────────────────────────────────────────────────────────────────────────────
- *  ███  CUSTOMIZE YOUR NODE HERE  ███
+ *  ███  cogni/games — the AI hub for gamers  ███
  *
- *  This file is the homepage. To make the landing page yours, you edit WORDS in
- *  this file and the brand HUE in `src/styles/tailwind.css`. You should not need
- *  to touch the layout components for a first-class customization.
- *
- *  Walk top-to-bottom and replace every placeholder with copy + data that sells
- *  YOUR node's mission. A stranger should understand what this node is for in
- *  five seconds. See `docs/guides/new-node-styling.md` and the `node-styling`
- *  skill for the full playbook.
+ *  Mission: a community-owned, Reddit-like hub where an AI and human players
+ *  gather game knowledge, coach each other, run education, and grow per-game
+ *  sub-communities. This file is the homepage copy for that mission.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
@@ -36,7 +31,7 @@ import {
   Activity,
   BrainCircuit,
   CheckCircle,
-  Network,
+  Gamepad2,
   Search,
   Sparkles,
   type LucideIcon,
@@ -62,13 +57,13 @@ export interface HeroContent {
 }
 
 export const HERO: HeroContent = {
-  statusLabel: "Template online",
-  headlineTop: "Choose a niche.",
-  headlineAccent: "Launch its AI node.",
+  statusLabel: "Now in open beta",
+  headlineTop: "Level up with your crew.",
+  headlineAccent: "An AI hub for gamers.",
   subhead:
-    "Spawn this template, give the node a mission, and set an AI to work in public. Contributors earn governance tokens, then vote on the agent's roadmap, priorities, and budget.",
-  primaryCta: "Try the template",
-  ctaTagline: "Pick the mission. Train the agent. Govern the budget.",
+    "Reddit-style sub-communities for every game you play — backed by an AI that gathers strategy, coaches your weak spots, and builds living guides. Contributors earn governance tokens and vote on what the agent learns next.",
+  primaryCta: "Enter the arena",
+  ctaTagline: "Ask the AI. Coach your crew. Own the hub.",
 };
 
 /* ─── HERO LINKS ──────────────────────────────────────────────────────────
@@ -76,7 +71,7 @@ export const HERO: HeroContent = {
  */
 export const HERO_LINKS = {
   chatUrl: "https://discord.gg/3b9sSyhZ4z",
-  sourceUrl: "https://github.com/cogni-dao/cogni",
+  sourceUrl: "https://github.com/cogni-dao/games",
 } as const;
 
 /* ─── AGENT STREAM ────────────────────────────────────────────────────────
@@ -100,38 +95,38 @@ export interface StreamEvent {
 }
 
 /** Label shown in the stream header next to the spinner. */
-export const AGENT_STREAM_SUBJECT = "cogni/node";
+export const AGENT_STREAM_SUBJECT = "cogni/games";
 
 export const AGENT_STREAM_SEQUENCES: StreamEvent[][] = [
   [
     {
       id: "a1",
       type: "thinking",
-      text: "Reading the niche brief: independent coffee shops in Nashville",
+      text: "Coaching request: 'I keep losing mid-game team fights as support'",
       at: 0,
     },
     {
       id: "a2",
       type: "searching",
-      text: "Scanning local calendars, review sites, and supplier chatter",
+      text: "Pulling high-elo VODs, patch notes, and the hub's support guides",
       at: 1800,
     },
     {
       id: "a3",
       type: "analyzing",
-      text: "Mapping demand spikes against staffing and inventory risks",
+      text: "Spotting the pattern: over-extended warding, late peel on the carry",
       at: 3400,
     },
     {
       id: "a4",
       type: "signal",
-      text: "Signal: weekend event cluster likely to strain 5 shops. Drafting an action plan.",
+      text: "Drill: a 3-step positioning fix + two practice scenarios. Sharing to r/support.",
       at: 5600,
     },
     {
       id: "a5",
       type: "done",
-      text: "Pass complete. Recommendation queued for token-holder review.",
+      text: "Coaching brief posted. Queued for community review and token weighting.",
       at: 7200,
     },
   ],
@@ -139,31 +134,31 @@ export const AGENT_STREAM_SEQUENCES: StreamEvent[][] = [
     {
       id: "b1",
       type: "thinking",
-      text: "Checking governance priorities from the latest member vote...",
+      text: "New patch dropped — scanning for what changed across the meta",
       at: 0,
     },
     {
       id: "b2",
       type: "searching",
-      text: "Ranking requested work by impact, cost, and mission fit",
+      text: "Diffing patch notes against the hub's tier lists and build guides",
       at: 2000,
     },
     {
       id: "b3",
       type: "analyzing",
-      text: "Estimating budget needed for the next agent capability",
+      text: "Flagging 4 builds now outdated, 2 sleeper picks trending up",
       at: 3800,
     },
     {
       id: "b4",
       type: "signal",
-      text: "Signal: route automation beats dashboard polish this epoch.",
+      text: "Auto-updating the living wiki and pinging affected sub-communities.",
       at: 5400,
     },
     {
       id: "b5",
       type: "done",
-      text: "Pass complete. Draft budget proposal ready for governance.",
+      text: "Meta digest published. Guides freshness restored to green.",
       at: 6800,
     },
   ],
@@ -171,25 +166,25 @@ export const AGENT_STREAM_SEQUENCES: StreamEvent[][] = [
     {
       id: "c1",
       type: "thinking",
-      text: "Tallying contribution receipts for the current epoch...",
+      text: "Tallying this week's contributions across every game community...",
       at: 0,
     },
     {
       id: "c2",
       type: "searching",
-      text: "Matching merged work, reviewed signals, and verified outcomes",
+      text: "Matching verified guides, accepted coaching, and answered questions",
       at: 1600,
     },
     {
       id: "c3",
       type: "analyzing",
-      text: "Calculating token weights before the next priority vote",
+      text: "Calculating token weights before the next roadmap vote",
       at: 3200,
     },
     {
       id: "c4",
       type: "done",
-      text: "Pass complete. Governance distribution ready to review.",
+      text: "Contribution receipts ready. Governance distribution open for review.",
       at: 5000,
     },
   ],
@@ -226,73 +221,73 @@ export interface ShowcaseItem {
 }
 
 export const SHOWCASE_SECTION = {
-  eyebrow: "Launch pattern",
-  heading: "A full node, ready to specialize.",
+  eyebrow: "What the hub does",
+  heading: "Every game gets its own AI-powered community.",
   subhead:
-    "The layout is already here: mission intake, agent work, contribution accounting, and governance. Swap in your niche, copy, and colors — then let the node start producing useful work.",
+    "Knowledge, coaching, education, and sub-communities — one shared place where the AI and the players make each other better. Pick your game and jump in.",
 } as const;
 
 export const SHOWCASE_CATEGORIES = [
   "All",
-  "Niche",
-  "Agent",
-  "Tokens",
+  "Knowledge",
+  "Coaching",
+  "Community",
   "Governance",
 ] as const;
 
 export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: "1",
-    title: "Pick a narrow mission the AI can actually serve",
-    category: "Niche",
-    source: "Node brief",
-    metric: "1",
-    change: 12,
+    title: "Living wikis that update themselves when the meta shifts",
+    category: "Knowledge",
+    source: "AI + community guides",
+    metric: "1.2k",
+    change: 14,
     outcomes: [
-      { label: "Focused", value: 82 },
-      { label: "Vague", value: 18 },
+      { label: "Up to date", value: 88 },
+      { label: "Stale", value: 12 },
     ],
-    footerLeft: "Coffee, local policy, markets",
-    footerRight: "First decision",
+    footerLeft: "Builds, tier lists, patch diffs",
+    footerRight: "Updated hourly",
   },
   {
     id: "2",
-    title: "Set the agent loose on research, monitoring, and action",
-    category: "Agent",
-    source: "Mission loop",
+    title: "Personal coaching that finds and fixes your weak spots",
+    category: "Coaching",
+    source: "VOD + match analysis",
     metric: "24/7",
-    change: 9,
+    change: 11,
     outcomes: [
-      { label: "Autonomous", value: 74 },
-      { label: "Manual", value: 26 },
+      { label: "Improving", value: 76 },
+      { label: "Plateaued", value: 24 },
     ],
-    footerLeft: "Watchlists + workflows",
-    footerRight: "Always on",
+    footerLeft: "Drills, reviews, scenarios",
+    footerRight: "On demand",
   },
   {
     id: "3",
-    title: "Reward useful work with governance token weight",
-    category: "Tokens",
-    source: "Activity ledger",
-    metric: "100%",
-    change: 6,
+    title: "Sub-communities for every title, rank, and playstyle",
+    category: "Community",
+    source: "Player-run hubs",
+    metric: "48",
+    change: 9,
     outcomes: [
-      { label: "Earned", value: 68 },
-      { label: "Unclaimed", value: 32 },
+      { label: "Active", value: 81 },
+      { label: "Quiet", value: 19 },
     ],
-    footerLeft: "Receipts, reviews, outcomes",
-    footerRight: "Epoch based",
+    footerLeft: "Threads, LFG, tournaments",
+    footerRight: "Member-led",
   },
   {
     id: "4",
-    title: "Vote on what the AI should learn and fund next",
+    title: "Token holders steer what the AI coaches and learns next",
     category: "Governance",
     source: "Treasury + roadmap",
     metric: "DAO",
-    change: 5,
+    change: 6,
     outcomes: [
-      { label: "Members", value: 79 },
-      { label: "Founder", value: 21 },
+      { label: "Members", value: 83 },
+      { label: "Founder", value: 17 },
     ],
     footerLeft: "Priorities + budget",
     footerRight: "Next vote",
@@ -323,68 +318,72 @@ export interface FeedSignal {
 }
 
 export const FEED_SECTION = {
-  eyebrow: "Example node loop",
-  heading: "From blank template to governed AI.",
+  eyebrow: "The agent, working in the open",
+  heading: "Watch the AI coach the community in real time.",
   subhead:
-    "This default feed shows the shape of a real node: pick a niche, make the AI useful, account for work, and let token holders steer what happens next.",
+    "Every guide it writes, every coaching call it makes, every meta shift it catches — posted publicly with its reasoning and sources, so players can trust it and improve it.",
 } as const;
 
 /** The status-bar verbs and the running totals shown above the feed. */
 export const FEED_STATUS = {
-  scannedLabel: "template events",
-  signalsLabel: "launch steps",
-  startScanned: 2847,
-  signalsToday: 12,
+  scannedLabel: "matches reviewed",
+  signalsLabel: "guides updated",
+  startScanned: 18420,
+  signalsToday: 37,
 } as const;
 
 export const FEED_SIGNALS: FeedSignal[] = [
   {
     id: "s1",
-    title: "Niche selected: Nashville independent coffee ops",
-    category: "Niche",
-    source: "Launch brief",
+    title: "Patch 14.6 breaks the top jungle clear — guide auto-updated",
+    category: "Knowledge",
+    source: "Patch diff + community wiki",
     direction: "positive",
-    confidence: 86,
+    confidence: 91,
     thesis:
-      "The mission is narrow enough for the agent to monitor real-world sources and broad enough for contributors to improve the playbook.",
-    sources: ["Node brief", "Local events", "Operator handoff"],
-    timestamp: "2m ago",
+      "Camp respawn timings changed enough to invalidate the fastest-clear route; the AI recomputed the path and flagged the old guide for review.",
+    sources: [
+      "Official patch notes",
+      "Hub clear-timer data",
+      "Top jungle mains",
+    ],
+    timestamp: "3m ago",
   },
   {
     id: "s2",
-    title: "Agent run proposed: event-driven staffing forecast",
-    category: "Agent",
-    source: "Mission loop",
+    title: "Coaching win: a support player climbed two ranks in a week",
+    category: "Coaching",
+    source: "Match history + drills",
     direction: "positive",
-    confidence: 72,
+    confidence: 78,
     thesis:
-      "A focused forecast is an early useful behavior: clear inputs, visible outputs, and an outcome the community can judge.",
-    sources: ["Event feeds", "Store hours", "Past signals"],
-    timestamp: "8m ago",
+      "Targeted positioning drills addressed a repeated team-fight death pattern; their measured deaths-per-fight dropped and rank followed.",
+    sources: ["Replay analysis", "Drill completion", "Ranked ladder"],
+    timestamp: "12m ago",
   },
   {
     id: "s3",
-    title: "Contribution receipts ready for token accounting",
-    category: "Tokens",
-    source: "Activity ledger",
+    title: "New sub-community proposed: co-op roguelikes",
+    category: "Community",
+    source: "Member requests",
     direction: "neutral",
-    confidence: 69,
+    confidence: 70,
     thesis:
-      "Useful work should become governance weight only after it is reviewable: merged changes, verified research, and accepted operations all leave receipts.",
-    sources: ["PR history", "Review notes", "Activity ledger"],
-    timestamp: "14m ago",
+      "Enough cross-posted questions cluster around co-op roguelikes to justify a dedicated hub with its own guides, LFG, and coaching track.",
+    sources: ["Thread volume", "Search queries", "Member poll"],
+    timestamp: "19m ago",
   },
   {
     id: "s4",
-    title: "First governance question drafted",
+    title: "Governance question drafted: fund a tournament-prep coach?",
     category: "Governance",
     source: "Roadmap",
     direction: "positive",
-    confidence: 76,
+    confidence: 74,
     thesis:
-      "Token holders should decide whether the next budget goes to better source coverage, stronger automation, or a public dashboard.",
+      "Token holders should decide whether the next budget funds deeper tournament prep, more game coverage, or faster wiki refresh.",
     sources: ["Treasury", "Roadmap", "Member requests"],
-    timestamp: "21m ago",
+    timestamp: "26m ago",
   },
 ];
 
@@ -397,9 +396,9 @@ export interface StatItem {
 }
 
 export const STATS: StatItem[] = [
-  { value: "1", label: "Niche" },
-  { value: "1", label: "Mission" },
-  { value: "24/7", label: "AI Worker" },
+  { value: "48", label: "Game communities" },
+  { value: "1.2k", label: "Living guides" },
+  { value: "24/7", label: "AI coach" },
   { value: "DAO", label: "Governance" },
 ];
 
@@ -414,4 +413,4 @@ export const STREAM_ICONS: Record<StreamEventType, LucideIcon> = {
   done: CheckCircle,
 };
 
-export const SECTION_ICON: LucideIcon = Network;
+export const SECTION_ICON: LucideIcon = Gamepad2;
