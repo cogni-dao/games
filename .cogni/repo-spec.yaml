@@ -15,7 +15,7 @@ scope_key: "default"
 
 intent:
   name: games
-  mission: "Define games's one-line mission here — refine in .cogni/repo-spec.yaml (surfaced at session start)."
+  mission: "A community-owned, Reddit-like hub where AI and players gather game knowledge, run education, coach each other, and grow per-game sub-communities."
 
 cogni_dao:
   dao_contract: "0x6ff3c9c5a942347eceed05b82a90d6d10d514d82"
