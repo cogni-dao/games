@@ -34,9 +34,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "cogni/games — the AI hub for gamers",
-  description:
-    "A community-owned hub where AI and players gather knowledge, coach each other, and build sub-communities around the games they love.",
+  title: "Cogni",
+  description: "Web3 Gov + Web2 AI",
 };
 
 // See operator/app/src/app/layout.tsx for rationale — `headers()` in the
