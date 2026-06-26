@@ -24,7 +24,7 @@ intent:
     icon: "Gamepad2"
     color: "#8b5cf6"
 
-cogni_dao:
+governance:
   dao_contract: "0x6ff3c9c5a942347eceed05b82a90d6d10d514d82"
   plugin_contract: "0x838f07e4118f8ceee29d602c03156645ffccbd76"
   signal_contract: "0x885ab2df5a4dd263fcee45b7d8d6aebef72c2498"
