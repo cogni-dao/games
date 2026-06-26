@@ -15,7 +15,14 @@ scope_key: "default"
 
 intent:
   name: games
-  mission: "A community-owned, Reddit-like hub where AI and players gather game knowledge, run education, coach each other, and grow per-game sub-communities."
+  # Identity projected to /.well-known/agent.json → the operator gallery reads it.
+  #   hook  — gallery card tagline · mission — session-cognition north-star
+  #   brand — { icon (Lucide NAME, SSOT for the mark), color }
+  hook: "Game together, coached by AI"
+  mission: "Empowering people to grow communities and knowledge around the games they love — starting with videogames. Not building games: facilitating people to play together, with AI coaching and tooling to level up their gameplay."
+  brand:
+    icon: "Gamepad2"
+    color: "#8b5cf6"
 
 cogni_dao:
   dao_contract: "0x6ff3c9c5a942347eceed05b82a90d6d10d514d82"
